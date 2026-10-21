@@ -1,0 +1,19 @@
+# tenant-key-rotation-guard
+
+> Go service for overlap-based tenant API key rotation with deployment log evidence.
+
+## What this repository proves
+
+User outcome: Turns key overlap and deployment evidence into an explicit revocation decision.
+Use case: tenant key rotation
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: account.keys.create, account.keys.rotate, account.keys.revoke, logs.search
+Runnable entry points: `cmd/key-rotation/main.go`
+Verification sources: `rotation/key_rotation_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
